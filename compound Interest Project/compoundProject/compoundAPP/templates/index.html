@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Compound Interest Calculator</title>
+    <style>
+         h1{
+            color:#eb4034;
+         }
+         div{
+            background-color:lightblue;
+            width:800px;
+         }
+         .form{
+            color:#343aeb;
+            font-weight:bold;
+         }
+         button{
+            background-color:green;
+            color:white;
+            border-radius:10px;
+            border-width:1.5px;
+            border-color:red;
+            height:40px;
+            width:150px;
+         }
+         h2{
+            color:#eb348f;
+            padding-bottom:5px;
+         }
+         
+
+    </style>
+  </head>
+  <center>
+  <div> 
+  <body>
+
+<center>
+
+    <h1>Easy way to Calculate your Compound Interest!</h1><hr>
+
+</center>
+   
+    
+    <form class="form" method="POST">
+         {% csrf_token %}
+         
+            <label for="amount" required>Amount in Rupees:</label>
+            <input type="float" type="reset" placeholder="Enter Amount"  id="amount" name="amount" required><br><br>
+        
+            <label for="time">Time (in years):</label>
+            <input type="float" placeholder="Enter Time" id="time" name="time" required><br><br>
+
+            <label for="rate">Rate of Interest in ₹:</label>
+            <input type="float" placeholder="Enter Rate of Interest" id="rate" name="rate" required ><br><br>
+        
+            <button type="submit">Calculate Interest</button>
+
+            <h2 type="reset">Total Amount to be Paid :{{ interest }} /-</h2>
+        
+    </form>
+
+   </div>
+
+
